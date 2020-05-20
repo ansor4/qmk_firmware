@@ -3,7 +3,7 @@
 # Make sure you have dfu-programmer installed!
 #----------------------------------------------------------------------------
 # Firmware options
-MOUSEKEY_ENABLE 					= no
+MOUSEKEY_ENABLE 					= yes
 
 #Debug options
 VERBOSE 		 							= yes

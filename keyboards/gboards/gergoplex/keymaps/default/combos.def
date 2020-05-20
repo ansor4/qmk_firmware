@@ -3,7 +3,6 @@
 
 // QMK wide includes
 #include "combos/germ-vim-helpers.def"
-#include "combos/germ-mouse-keys.def"
 
 // User includes
 #include "gergoplex.def"

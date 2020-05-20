@@ -1,11 +1,14 @@
 // Gergoplex specfic combos 
 
-COMB(opBacksl,    KC_BSLS,          KC_O, KC_P)
-COMB(hjLess,      KC_LT,            KC_H, KC_J)
-COMB(klGreat,     KC_GT,            KC_K, KC_L)
-COMB(mcDoquo,      KC_DQUO,          KC_M, KC_COMM)
+COMB(nmLess,      KC_LT,            KC_N, KC_M)
+COMB(mcGreat,     KC_GT,            KC_M, KC_COMM)
 COMB(cpUnds,      KC_UNDS,          KC_COMM, KC_DOT)
-COMB(nmQuot,      KC_QUOT,          KC_N, KC_M)
+
+COMB(ioDoquo,     KC_DQUO,          KC_I, KC_O)
+COMB(klQuot,      KC_QUOT,          KC_K, KC_L)
+
+COMB(jkEnter,     KC_ENT,           KC_J, KC_K)
+
 COMB(gbClic,      KC_BTN1,          KC_G, KC_B)
 COMB(fvClic,      KC_BTN2,          KC_F, KC_V)
 
