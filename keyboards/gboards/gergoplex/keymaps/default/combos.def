@@ -8,5 +8,3 @@
 // User includes
 #include "gergoplex.def"
 
-// Word completion
-#include "combos/eng-combos.def"
