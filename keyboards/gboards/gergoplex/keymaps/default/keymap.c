@@ -15,13 +15,13 @@
 
 /* Combomap
  *
- * ,-----------------------------.       ,--------------------------------.
- * |      |    ESC    |     |     |      |     |    ESC   DQO   |SLH      |
- * |-----+-----+-----+-----+------|      |--------------------------------|
- * |      |   BSPC   ENT    |     |      |     |    ENTR  QUO    |        | 
- * |-----+-----+-----+--RMB+-LMB--+		 |--------------------------------|
- * |      |   MINS    |     |     |      |    LES   GRT   UNDS   |        |
- * `------+-----+-----+------+----'		 `--------------------------------'
+ * ,------------------------------.      ,--------------------------------.
+ * |      |   BSPC   |     |      |      |     |    ESC   DQO    |        |
+ * |------+-----+----+-----+------|      |--------------------------------|
+ * |      |   ESC   ENT    |      |      |     |    ENTR  QUO    |        | 
+ * |------+-----+----+--RMB+-LMB--+		 |--------------------------------|
+ * |      |   MINS   |     |      |      |    LES   GRT   UNDS   |        |
+ * `------+-----+----+-----+------'		 `--------------------------------'
  *  .-------------------------.           .-----------------.   
  *  |        |       |        |           |        |    |   |
  *  '-------------------------'           '-----------------' 
@@ -36,11 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-----+-----+-----+-----+------|      |--------------------------------|
  * |CTRL/A|  S  |  D  |  F  |  G  |      |  H  |  J  |  K  |  L  | CTRL/; | 
  * |-----+-----+-----+-----+------+		 |--------------------------------|
- * |SHFT/Z|  X  |  C  |  V  |  B  |      |  N  |  M  |  <  |  >  | SHFT/? |
+ * |SHFT/Z|  X  |  C  |  V  |  B  |      |  N  |  M  |  ,  |  .  | SHFT/? |
  * `------+-----+-----+------+----'		 `--------------------------------'
- *  .-------------------------.           .---------------------.   
- *  |ESC/ALT |BSP/CMD|SPC(SYM)|           |SPC(NUM)|SPC/CMD| TAB|
- *  '-------------------------'           '---------------------' 
+ *  .-------------------------.           .--------------------------.   
+ *  |DEL/ALT |BSP/CMD|SPC(SYM)|           |ENT(NUM)|SPC/CMD| TAB/SHFT|
+ *  '-------------------------'           '--------------------------' 
  */
 [BASE] = LAYOUT_gergoplex(
     KC_Q,               KC_W, KC_E, KC_R, KC_T,  	KC_Y, KC_U, KC_I,    KC_O, 	 KC_P, 
@@ -48,27 +48,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     MT(MOD_RSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH),
 
         // Left
-        MT(MOD_LALT, KC_ESC), MT(MOD_LGUI, KC_BSPC), LT(SYMB, KC_SPC),
+        MT(MOD_LALT, KC_DEL), MT(MOD_LGUI, KC_BSPC), LT(SYMB, KC_ESC),
         // Right
-        LT(NUMB, KC_LSFT), MT(MOD_RGUI, KC_SPC), MT(MOD_RSFT, KC_TAB)
+        LT(NUMB, KC_ENT), MT(MOD_RGUI, KC_SPC), MT(MOD_RSFT, KC_TAB)
     ),
 /* Keymap 1: Symbols layer
  * ,-----------------------------.       ,-------------------------------.
- * |  !   |  @  |  {  |  }  |     |  `  |  ~  |  _  |     |  \  |        |
+ * |  !  |  @  |  {  |  }  |  |   |     |  `  |  ~  |  _  |  |  |   \    |
  * |-----+-----+-----+-----+------|     |--------------------------------|
- * |  #   |  $  |  (  |  )  | LMB |     |  +  |  -  |  /  |  *  |    '   | 
+ * |  #  |  $  |  (  |  )  | LMB  |     |  +  |  -  |  /  |  *  |    '   | 
  * |-----+-----+-----+-----+------+	    |--------------------------------|
- * |  %   |  ^  |  [  |  ]  | RMB |     |  &  |  =  |  ,  |  .  |   -    |
- * `------+-----+-----+------+----'	    `--------------------------------'
+ * |  %  |  ^  |  [  |  ]  | RMB  |     |  &  |  =  |  ,  |  .  |   -    |
+ * `-----+-----+-----+-----+------'	    `--------------------------------'
  *  			.-----------------.     .------------------.   
  *  			|MMB |  ;  	|  =  |		|  =  |  ;  |  DEL |
  *  			'-----------------'     '------------------' 
  */
 [SYMB] = LAYOUT_gergoplex(
-    KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   KC_GRV,  KC_TILD, KC_UNDS, KC_TRNS, KC_BSLS,
+    KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,   KC_GRV,  KC_TILD, KC_UNDS, KC_PIPE, KC_BSLS,
     KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_BTN2,   KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_QUOT,
     KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_BTN1,   KC_AMPR, KC_EQL,  KC_COMM, KC_DOT,  KC_MINS,
-                      CMB_TOG, KC_SCLN, KC_EQL,   KC_EQL,  KC_SCLN, KC_DEL
+                      CMB_TOG, KC_SCLN, KC_EQL,    KC_EQL,  KC_SCLN, KC_DEL
     ),
 /* Keymap 2: Pad/Function layer
  * ,-----------------------------.       ,-------------------------------.
