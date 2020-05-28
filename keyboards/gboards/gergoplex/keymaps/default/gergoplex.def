@@ -12,3 +12,8 @@ COMB(jkEnter,     KC_ENT,           KC_J, KC_K)
 COMB(gbClic,      KC_BTN1,          KC_G, KC_B)
 COMB(fvClic,      KC_BTN2,          KC_F, KC_V)
 
+COMB(lcQues,      KC_QUES,          KC_L, KC_SCOLON)
+COMB(hjMins,      KC_MINS,          KC_H, KC_J)
+COMB(yuPlus,      KC_PLUS,          KC_Y, KC_U)
+COMB(tdDel,       KC_DEL,           KC_TILD, KC_D)
+
