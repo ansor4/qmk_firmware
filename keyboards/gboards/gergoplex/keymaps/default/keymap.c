@@ -16,9 +16,9 @@
 /* Combomap
  *
  * ,------------------------------.      ,--------------------------------.
- * |      |   BSPC   |     |      |      |    PLUS  ESC   DQO    |        |
+ * |      |    ESC   |     |      |      |    PLUS  ESC   DQO    |        |
  * |------+-----+----+-----+------|      |--------------------------------|
- * |      |    ESC  ENT    |      |      |    MIN   ENTR  QUO   QUES      | 
+ * |      |    BSP  TAB    |      |      |    MIN   ENTR  QUO   QUES      | 
  * |------+-----+----+--RMB+-LMB--+		 |--------------------------------|
  * |      |     |    |     |      |      |    LES   GRT   UNDS   |        |
  * `------+-----+----+-----+------'		 `--------------------------------'
@@ -54,20 +54,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 /* Keymap 1: Symbols layer
  * ,-----------------------------.      ,--------------------------------.
- * |  !  |  @  |  #  |  $  |  %   |     |  ^  |  &  |  *  |  (  |   )   |
+ * |  !  |  @  |  #  |  $  |  %   |     |  ^  |  &  |  *  |  -  |   +   |
  * |-----+-----+-----+-----+------|     |-------------------------------|
- * |  `  |  ~  |     |  :  | LMB  |     |  =  |  -  |  +  |  {  |   }   | 
+ * |  `  |  ~  |  ?  |  :  | RMB  |     |  [  |  (  |  )  |  |  |   \   | 
  * |-----+-----+-----+-----+------+	    |-------------------------------|
- * |     |     |     |     | RMB  |     |  \  |  |  |  /  |  [  |   ]   |
+ * |     |     |     |     | LMB  |     |  ]  |  {  |  }  |     |       |
  * `-----+-----+-----+-----+------'	    `-------------------------------'
  *             .------------------.     .------------------.   
  *             | MMB |     	|     |		|  =  |     |  DEL |
  *             '------------------'     '------------------' 
  */
 [SYMB] = LAYOUT_gergoplex(
-    KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-    KC_GRV,  KC_TILD, KC_TRNS, KC_COLN, KC_BTN2,   KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1,   KC_BSLS, KC_PIPE, KC_SLSH, KC_LBRC, KC_RBRC,
+    KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS,
+    KC_GRV,  KC_TILD, KC_QUES, KC_COLN, KC_BTN1,   KC_LBRC, KC_LPRN, KC_RPRN, KC_PIPE, KC_BSLS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN2,   KC_RBRC, KC_LCBR, KC_RCBR, KC_TRNS, KC_TRNS,
                       CMB_TOG, KC_TRNS, KC_TRNS,   KC_EQL,  KC_TRNS, KC_DEL
     ),
 /* Keymap 2: Pad/Function layer
