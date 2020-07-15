@@ -60,18 +60,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------.      ,--------------------------------.
  * |  !  |  @  |  #  |  $  |  %   |     |  ^  |  &  |  *  |  -  |   +   |
  * |-----+-----+-----+-----+------|     |-------------------------------|
- * |  `  |  ~  |  (  |  )  | RMB  |     |  [  |  (  |  )  |  |  |   \   | 
+ * |  `  |  ~  |  (  |  )  | RMB  |     |     |     |     |  |  |   \   | 
  * |-----+-----+-----+-----+------+	    |-------------------------------|
- * |     |     |  [  |  ]  | LMB  |     |  ]  |  {  |  }  |     |       |
+ * |     |     |  [  |  ]  | LMB  |     |     |     |     |     |       |
  * `-----+-----+-----+-----+------'	    `-------------------------------'
  *             .------------------.     .------------------.   
- *             | MMB |     	|     |		|  =  |     |  DEL |
+ *             | MMB |     	|     |		  |  =  |     |  DEL |
  *             '------------------'     '------------------' 
  */
 [SYMB] = LAYOUT_gergoplex(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS,
-    KC_GRV,  KC_TILD, KC_LPRN, KC_RPRN, KC_BTN1,   KC_LBRC, KC_LPRN, KC_RPRN, KC_PIPE, KC_BSLS,
-    KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_BTN2,   KC_RBRC, KC_LCBR, KC_RCBR, KC_TRNS, KC_TRNS,
+    KC_GRV,  KC_TILD, KC_LPRN, KC_RPRN, KC_BTN1,   KC_TRNS, KC_TRNS, KC_TRNS, KC_PIPE, KC_BSLS,
+    KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_BTN2,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                       CMB_TOG, KC_TRNS, KC_TRNS,   KC_EQL,  KC_TRNS, KC_DEL
     ),
 /* Keymap 2: Pad/Function layer
@@ -79,11 +79,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |  1   |  2  |  3  |  4  |  5  |      |  6  |  7  |  8  |  9  |   0   |
  * |-----+-----+-----+-----+------|      |-------------------------------|
  * |  F1  | F2  | F3  | F4  |  F5 |      | LFT | DWN | UP  | RGT | VOLUP | 
- * |-----+-----+-----+-----+------+		 |-------------------------------|
+ * |-----+-----+-----+-----+------+	  	 |-------------------------------|
  * |  F6  | F7  | F8  | F9  | F10 |      |MLFT | MDWN| MUP | MRGT| VOLDN |
- * `------+-----+-----+------+----'		 `-------------------------------'
+ * `------+-----+-----+------+----'		   `-------------------------------'
  *  			.-----------------.         .-----------------.   
- *  			| F11 | F12|	  |			|     | PLY | SKP |
+ *  			| F11 | F12|	    |   			|     | PLY | SKP |
  *  			'-----------------'         '-----------------' 
  */
 [NUMB] = LAYOUT_gergoplex(
