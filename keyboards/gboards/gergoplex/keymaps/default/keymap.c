@@ -49,12 +49,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_gergoplex(
     KC_Q,               KC_W, KC_E, KC_R, KC_T,  	KC_Y, KC_U, KC_I,    KC_O, 	 KC_P, 
     MT(MOD_LCTL, KC_A), KC_S, KC_D, KC_F, KC_G,  	KC_H, KC_J, KC_K,    KC_L, 	 KC_SCLN,
-    MT(MOD_RSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH),
+    MT(MOD_RSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
 
         // Left
-        MT(MOD_LALT, KC_DEL), MT(MOD_LGUI, KC_BSPC), LT(SYMB, KC_ESC),
+        KC_LALT, MT(MOD_LGUI, KC_BSPC), LT(SYMB, KC_TRNS),
         // Right
-        LT(NUMB, KC_ENT), MT(MOD_RGUI, KC_SPC), MT(MOD_RSFT, KC_TAB)
+        LT(NUMB, KC_TRNS), MT(MOD_RGUI, KC_SPC), KC_RSFT
     ),
 /* Keymap 1: Symbols layer
  * ,-----------------------------.      ,--------------------------------.
@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [SYMB] = LAYOUT_gergoplex(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_PLUS,
     KC_GRV,  KC_TILD, KC_LPRN, KC_RPRN, KC_BTN1,   KC_TRNS, KC_TRNS, KC_TRNS, KC_PIPE, KC_BSLS,
-    KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_BTN2,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC, KC_BTN2,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                       CMB_TOG, KC_TRNS, KC_TRNS,   KC_EQL,  KC_TRNS, KC_DEL
     ),
 /* Keymap 2: Pad/Function layer
