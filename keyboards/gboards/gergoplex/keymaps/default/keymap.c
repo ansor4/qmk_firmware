@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_gergoplex(
     KC_Q,               KC_W, KC_E, KC_R, KC_T,  	KC_Y, KC_U, KC_I,    KC_O, 	 KC_P, 
     MT(MOD_LCTL, KC_A), KC_S, KC_D, KC_F, KC_G,  	KC_H, KC_J, KC_K,    KC_L, 	 KC_SCLN,
-    MT(MOD_LSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH),
+    MT(MOD_LSFT, KC_Z), KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
 
         // Left
         KC_LALT, MT(MOD_LGUI, KC_BSPC), MO(SYMB),
@@ -88,22 +88,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [NUMB] = LAYOUT_gergoplex(
     KC_1,  KC_2,  KC_3,  KC_4,  KC_5,		 	KC_6,  	KC_7, 	 KC_8, 		KC_9, 	 KC_0,
-    KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,   	KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, ONEPASS,
+    RALT(KC_1), RALT(KC_2), RALT(KC_3), RALT(KC_4), RALT(KC_5),   	KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, RGUI(KC_BSLS),
     KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,  	KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_TRNS,
-                 KC_F11,KC_F12,KC_TRNS,  	KC_TRNS,KC_MPLY,KC_MNXT
+                 KC_F11,KC_F12, KC_TRNS,  KC_TRNS,KC_MPLY,KC_MNXT
     )
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case ONEPASS:
-      if (record->event.pressed) {
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  // switch (keycode) {
+    // case ONEPASS:
+      // if (record->event.pressed) {
         // when keycode QMKURL is pressed
-        SEND_STRING(SS_LGUI("\\"));
-      } else {
+        // SEND_STRING(SS_LGUI("\\"));
+      // } else {
         // when keycode QMKURL is released
-      }
-      break;
-  }
-  return true;
-};
+      // }
+      // break;
+  // } return true;
+// };
